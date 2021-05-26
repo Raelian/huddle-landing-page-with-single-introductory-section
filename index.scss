@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+@import "fa/scss/fontawesome.scss";
+
+/* Primary colors */
+$violet: hsl(257, 40%, 49%);
+$sft-magenta: hsl(300, 69%, 71%);
+
+/* Font family */
+$ff-poppins: 'Poppins', sans-serif;
+$ff-open-sans: 'Open Sans', sans-serif;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100vw 375px;
+    background-color: $violet;
+    background-position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top {
+    width: 300px;
+    margin: 32px auto 0;
+
+    &__logo {
+        width: 140px;
+        height: 32px;
+    }
+}
+
+.main {
+    width: 300px;
+    margin: 60px auto 0;
+    color: whitesmoke;
+    font-family: $ff-poppins;
+    text-align: center;
+
+    &__illustration {
+        background-image: url(images/illustration-mockups.svg);
+        background-size: 300px 220px;
+        background-repeat: no-repeat;
+        width: inherit;
+        height: 220px;
+    }
+
+    &__title {
+        margin-top: 50px;
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    &__text {
+        font-family: $ff-open-sans;
+        margin-top: 15px;
+        font-size: .9rem;
+        line-height: 1.4rem;
+    }
+
+    &__btn {
+        margin-top: 25px;
+        width: 200px;
+        height: 40px;
+        border-radius: 50px;
+        border: none;
+        font-size: .8rem;
+        color: $violet;
+        outline: none;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: white;
+            background-color: $sft-magenta;
+        }
+    }
+
+}
+
+.footer {
+    margin: 78px auto 30px;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__link {
+        color: white;
+        text-decoration: none;
+        outline: none;
+        cursor: pointer;
+        width: 27px;
+        height: 27px;
+        border-radius: 50%;
+
+        &:hover > i,
+        &:focus > i {
+            color: $sft-magenta;
+            border-color: $sft-magenta;
+        }
+
+        > i {
+            width: 27px;
+            height: 27px;
+            font-size: .85rem;
+            border-radius: 50%;
+            border: 1px solid white;
+            padding: 6px 7px;
+        }
+    }
+}
+
+@media screen and (min-width: 750px) {
+    
+    html,
+    body {
+        background-size: 100vw 750px;
+    }
+
+    .top {
+        width: 594px;
+        margin: 60px auto 0;
+
+        &__logo {
+            width: 250px;
+            height: 70px;
+        }
+    }
+
+    .main {
+        width: 594px;
+        margin-top: 120px;
+
+        &__illustration {
+            background-size: 600px 430px;
+            background-repeat: no-repeat;
+            width: inherit;
+            height: 430px;
+        }
+
+        &__title {
+            margin-top: 134px;
+            font-size: 2.9rem;
+        }
+
+        &__text {
+            margin-top: 30px;
+            font-size: 1.93rem;
+            line-height: 3rem;
+
+        }
+
+        &__btn {
+            margin-top: 50px;
+            width: 400px;
+            height: 80px;
+            font-size: 1.6rem;
+        }
+    }
+
+    .footer {
+        margin: 120px auto 0;
+        width: 180px;
+        height: 160px;
+
+        &__link {
+            width: 56px;
+            height: 56px;
+
+            > i {
+                width: 56px;
+                height: 56px;
+                font-size: 27px;
+                padding: 12px 0 0 15px;
+                border-width: 2px;
+            }
+        }
+    }
+}
+
+@media  screen and (min-width: 1350px) {
+    
+    html,
+    body {
+        background-image: url(images/bg-desktop.svg);
+        background-size: 1320px 100%;
+        
+    }
+
+    .top {
+        margin: 50px 40px 0;
+
+        &__logo {
+            width: 260px;
+            height: 50px;
+        }
+    }
+
+    .main {
+        width: auto;
+        margin: 100px 80px 0;
+        display: flex;
+        flex-direction: row;
+
+        &__illustration {
+            width: 100%;
+            max-width: 700px;
+            height: 494px;
+            background-size: auto 494px;
+        }
+
+        &__section {
+            position: relative;
+            width: 520px;
+            height: 300px;
+            margin-top: 40px;
+            margin-left: 60px;
+        }
+
+        &__title {
+            font-size: 2.3rem;
+            text-align: left;
+            margin: 0;
+            padding-right: 20px;
+        }
+
+        &__text {
+            margin: 20px 0 0;
+            font-size: 1.1rem;
+            line-height: 1.8rem;
+            text-align: left;
+        }
+
+        &__btn {
+            margin: 23px 0 0;
+            width: 200px;
+            height: 60px;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    .footer {
+        margin: 26px 0 0 82vw;
+
+        &__link {
+            width: 50px;
+            height: 50px;
+
+            > i {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+                padding: 10px 0 0 10px;
+                border-width: 1px;
+            }
+        }
+    }
+}
